@@ -28,7 +28,7 @@ class botwhatsapp:
             to_send = self.driver.find_element_by_xpath("//div[@class='_3HQNh _1Ae7k']")
             time.sleep(3)
             to_send.click()
-            time.sleep(4)
+            time.sleep(2)
 
 bot = botwhatsapp()
 bot.Send_messages()
