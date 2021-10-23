@@ -5,7 +5,7 @@ import time
 class botwhatsapp:
     def __init__(self):
         self.messenge = "I'm testing a bot" #the message you want to send
-        self.send_to_groups = ["Group1","Group2","Group3"] #Name of the groups or people you want to send the message to
+        self.send_to_groups = ["Jonathan"] #Name of the groups or people you want to send the message to
         options = webdriver.ChromeOptions()
         options.add_argument('lang=pt-br')
         self.driver=webdriver.Chrome(executable_path=r'chromedriver.exe',chrome_options=options)    
@@ -29,7 +29,9 @@ class botwhatsapp:
             time.sleep(3)
             to_send.click()
             time.sleep(2)
-
+    def Close_browser(self):
+        self.driver.close()
+    
 bot = botwhatsapp()
 bot.Send_messages()
             
